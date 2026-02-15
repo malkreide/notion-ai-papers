@@ -131,3 +131,13 @@ Entwickelt für Private und Organisationen.
 ---
 
 **Hinweis**: Dieser Skill ist speziell auf den Kontext öffentliche Verwaltung und Bildungswesen zugeschnitten. Für andere Anwendungsfälle sind Anpassungen in `references/user-context.md` und `SKILL.md` erforderlich.
+
+---
+
+<div align="center">
+
+**Made with ❤️ in Zürich**
+
+[LinkedIn](https://www.linkedin.com/in/hayaloezkan/) • [Documentation](docs/) • [Contributing](CONTRIBUTING.md)
+
+</div>
