@@ -4,10 +4,10 @@ Ein spezialisierter Claude Skill für die systematische Analyse von AI-Research-
 
 ## 🎯 Übersicht
 
-Dieser Skill wurde entwickelt für die effiziente Verarbeitung wissenschaftlicher Publikationen im Kontext öffentlicher Verwaltung und Bildungswesen. Er automatisiert den Workflow von der Paper-Identifikation bis zur strukturierten Ablage in Notion.
+Dieser Skill wurde entwickelt für die effiziente Verarbeitung wissenschaftlicher Publikationen. Er automatisiert den Workflow von der Paper-Identifikation bis zur strukturierten Ablage in Notion.
 
-**Entwickelt für:** Schulamt der Stadt Zürich  
-**Anwendungskontext:** KI-Fachgruppe Stadtverwaltung, Geschäftsleitungs-Entscheidungen, Bildungsforschung
+**Entwickelt für:** Privat und Organisationen  
+**Anwendungskontext:** KI-Fachgruppe, Geschäftsleitungs-Entscheidungen, Bildungsforschung etc.
 
 ## ✨ Hauptfunktionen
 
@@ -126,7 +126,7 @@ MIT License - siehe [LICENSE](LICENSE) für Details.
 
 ## 🙏 Danksagungen
 
-Entwickelt für das Schulamt der Stadt Zürich im Rahmen der KI-Fachgruppe der Stadtverwaltung.
+Entwickelt für Private und Organisationen.
 
 ---
 
