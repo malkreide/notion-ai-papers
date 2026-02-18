@@ -1,15 +1,15 @@
 ---
 name: notion-ai-papers
-description: Systematische Analyse und Integration von AI-Research-Papers in eine Notion-Datenbank für das Schulamt der Stadt Zürich. Nutze diesen Skill wenn der User (1) Google Drive Links zu AI-Papers teilt und diese in die Notion-Datenbank "AI Papers & Resources" einfügen möchte, (2) Papers mit Fokus auf Bildung, öffentliche Verwaltung, KI-Governance oder Verwaltungsdigitalisierung analysieren lässt, (3) systematische Paper-Reviews für strategische GL-Entscheidungen benötigt, (4) eine Übersichtstabelle zu eingefügten Papers anfordert.
+description: Systematische Analyse und Integration von AI-Research-Papers in eine Notion-Datenbank. Nutze diesen Skill wenn der User (1) Links zu AI-Papers teilt – arxiv, DOI, ScienceDirect, Nature, IEEE oder andere Quellen – und diese in die Notion-Datenbank "AI Papers & Resources" einfügen möchte, (2) Paper-Titel oder Referenzen nennt und eine Aufnahme in die Datenbank wünscht, (3) Papers mit Fokus auf Bildung, öffentliche Verwaltung, KI-Governance oder Verwaltungsdigitalisierung analysieren lässt, (4) systematische Paper-Reviews für strategische GL-Entscheidungen benötigt, (5) eine Übersichtstabelle zu eingefügten Papers anfordert. Typische Trigger: "Füge ein:", "Paper hinzufügen", ein arxiv/DOI-Link ohne weiteren Kontext, oder mehrere Links nacheinander.
 ---
 
 # Notion AI Papers Integration
 
-Dieser Skill ermöglicht die systematische Analyse von AI-Research-Papers und deren strukturierte Integration in die Notion-Datenbank "AI Papers & Resources" für das Schulamt der Stadt Zürich.
+Dieser Skill ermöglicht die systematische Analyse von AI-Research-Papers und deren strukturierte Integration in die Notion-Datenbank "AI Papers & Resources".
 
 ## Workflow-Übersicht
 
-1. **Identifikation**: Analysiere Google Drive Links oder Paper-Referenzen
+1. **Identifikation**: Analysiere Links oder Paper-Referenzen
 2. **Beschaffung**: Lade Papers von öffentlichen Quellen (arXiv, DOI, etc.)
 3. **Analyse**: Extrahiere alle erforderlichen Informationen
 4. **Integration**: Füge strukturierte Daten in Notion-Datenbank ein
@@ -24,14 +24,20 @@ Dieser Skill ermöglicht die systematische Analyse von AI-Research-Papers und de
 ## Schritt 1: Paper-Identifikation
 
 **Input-Formate:**
-- Google Drive Links: `https://drive.google.com/open?id=...`
+- arxiv-Links: `https://arxiv.org/abs/2403.12345` oder `https://arxiv.org/pdf/2403.12345`
+- DOI-Links: `https://doi.org/10.xxxx/...`
+- Publisher-Links: ScienceDirect, Nature, IEEE, ACM, Springer, PNAS etc.
+- Paper-Titel als Freitext: z.B. "Constitutional AI: Harmlessness from AI Feedback"
 - Dateinamen: z.B. `1-s2.0-S2666920X25000736-main.pdf`
-- Paper-Titel oder Themen
+- Bare Links ohne Kontext: User schickt nur einen Link – behandle als Paper-Einfüge-Auftrag
 
 **Vorgehen:**
-1. Versuche Papers über `google_drive_fetch` Tool zu lesen (nur Google Docs, keine PDFs)
-2. Falls PDFs nicht direkt lesbar: Extrahiere Informationen aus Dateinamen
-3. Suche nach öffentlichen Quellen für Papers
+1. **Link-Typ erkennen**: Bestimme anhand der URL die Quelle (arxiv, DOI, Publisher, Google Drive)
+2. **Direkt-Zugriff versuchen**: Verwende `web_fetch` für arxiv, DOI und Publisher-Links
+3. **Google Drive**: Verwende `google_drive_fetch` (nur Google Docs, keine PDFs)
+4. **Freitext/Titel**: Suche via `web_search` nach dem Paper
+5. **Dateinamen**: Extrahiere PII-Nummer oder Titel-Hinweise, dann Web-Suche
+6. Falls Paper nicht direkt lesbar: Extrahiere Metadaten von der Landing Page (Abstract, Autoren, Datum)
 
 ## Schritt 2: Paper-Beschaffung
 
@@ -118,7 +124,6 @@ Zusätzliche Informationen die in keinem anderen Feld Platz hatten:
 - Kritische Bewertung der Methodik
 
 ### Links und leere Felder
-- **Google Drive File**: Der ursprüngliche Google Drive Link vom User
 - **NotebookLM**: Leer lassen
 - **Rating**: Leer lassen  
 - **LearningItems**: Leer lassen
