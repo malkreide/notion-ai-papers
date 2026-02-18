@@ -1,6 +1,18 @@
 ---
 name: notion-ai-papers
-description: Systematische Analyse und Integration von AI-Research-Papers in eine Notion-Datenbank. Nutze diesen Skill wenn der User (1) Links zu AI-Papers teilt – arxiv, DOI, ScienceDirect, Nature, IEEE oder andere Quellen – und diese in die Notion-Datenbank "AI Papers & Resources" einfügen möchte, (2) Paper-Titel oder Referenzen nennt und eine Aufnahme in die Datenbank wünscht, (3) Papers mit Fokus auf Bildung, öffentliche Verwaltung, KI-Governance oder Verwaltungsdigitalisierung analysieren lässt, (4) systematische Paper-Reviews für strategische GL-Entscheidungen benötigt, (5) eine Übersichtstabelle zu eingefügten Papers anfordert. Typische Trigger: "Füge ein:", "Paper hinzufügen", ein arxiv/DOI-Link ohne weiteren Kontext, oder mehrere Links nacheinander.
+description: >
+  Systematische Analyse und Integration von AI-Research-Papers in eine
+  Notion-Datenbank für das Schulamt der Stadt Zürich. Nutze diesen Skill
+  wenn der User (1) Links zu AI-Papers teilt – arxiv, DOI, ScienceDirect,
+  Nature, IEEE, Google Drive oder andere Quellen – und diese in die
+  Notion-Datenbank AI Papers & Resources einfügen möchte, (2) Paper-Titel
+  oder Referenzen nennt und eine Aufnahme in die Datenbank wünscht,
+  (3) Papers mit Fokus auf Bildung, öffentliche Verwaltung, KI-Governance
+  oder Verwaltungsdigitalisierung analysieren lässt, (4) systematische
+  Paper-Reviews für strategische GL-Entscheidungen benötigt, (5) eine
+  Übersichtstabelle zu eingefügten Papers anfordert. Typische Trigger
+  sind "Füge ein", "Paper hinzufügen", ein arxiv/DOI-Link ohne weiteren
+  Kontext, oder mehrere Links nacheinander.
 ---
 
 # Notion AI Papers Integration
