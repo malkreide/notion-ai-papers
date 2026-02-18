@@ -138,6 +138,6 @@ Entwickelt für Private und Organisationen.
 
 **Made with ❤️ in Zürich**
 
-[LinkedIn](https://www.linkedin.com/in/hayaloezkan/) • [Documentation](docs/) • [Contributing](CONTRIBUTING.md)
+[LinkedIn](https://www.linkedin.com/in/hayaloezkan/) • [Contributing](CONTRIBUTING.md)
 
 </div>
